@@ -98,8 +98,11 @@ int main(int argc, char *argv[])
     int countsteps = 0;
     int t_stop = 0;
     time(&start);
-    while(Nleaders>NAGG && t_stop<=STOP)
+    bool t_range = true;
+
+    //while(Nleaders>NAGG && t_stop<=STOP)
     //while (Nleaders>NAGG)
+    while(t_range)
     {
         /**************************************************************/
         // Update the data collected at each time-step
@@ -320,6 +323,14 @@ int main(int argc, char *argv[])
                             gyr_out[m] = find_gyr_rad(Grad,m_agg,xlab,com_agg[m],nparcl[m]);
                         }
                 }
+        }
+
+        // exit while loop accounting for different time ranges for data
+        if(Nleaders==NAGG) t_range = false;
+        else
+        {
+            if(s>36 && s<101) t_range = (countsteps>t_s) ? false : true;
+            if(s>100) t_range = (countsteps>t_max) ? false : true;
         }
     }
     time(&end);
