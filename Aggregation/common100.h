@@ -10,7 +10,8 @@
 #define TOTNPARCL     100                        // Total number of parcels in the system
 #define BOXL          128.                       // This would be a fixed volume fraction
 #define NAGG          1.                         // Number of aggregates allowed at final time
-#define STOP          1400000 //set it large for now                   // Number of timesteps for the stopping criterion for N=100
+#define t_s           4050000                    // 5% ref slope time
+#define t_max         1400000                    // 50% ref slope time
 #define R             1.                         // Radius of a single sphere
 #define diam          (2.0*R)                    // Diameter of the sphere
 #define D_T           0.5                        // D_T=0.5 for a single sphere
