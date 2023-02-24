@@ -9,9 +9,9 @@ System is hard-coded to be three-dimensional, and periodic boundary conditions (
     'common100.h' contains global parameters and functions declarations
     
 ### TO COMPILE ###
-    Type './compile.sh'
+    Type './compile100.sh'
 
 ### TO RUN ###
-    Type './run.sh'
+    Type './run100.sh'
     
 Note: make sure to have made the shell scripts into executables 'chmod +x <filename>'
