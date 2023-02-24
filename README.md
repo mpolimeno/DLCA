@@ -2,6 +2,7 @@
 
 This repo contains code that simulates particulate aggregation, building on the Diffusion-Limited Cluster Aggregation (DLCA) model by adding rotational Brownian motion, realistic size-depedent diffusivities and settling under gravity.
 System is hard-coded to be three-dimensional, and periodic boundary conditions (PBC) are implemented in all spatial directions.
+This version simulate Brownian motion for 100 particles, and run until either they all have merged into a single objects, or until a certain cutoff time specified in the header file.
 
 ### Basic Structure ###
     'main100.cpp' is the driver
